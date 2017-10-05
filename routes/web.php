@@ -30,3 +30,6 @@ Route::get('/pessoas/{id}', function($id) {
   $pessoa = Person::find($id);
   dd($pessoa);
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
